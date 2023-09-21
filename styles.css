@@ -1,0 +1,97 @@
+/* Styles de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #031f47;
+    color: #d3aeda;
+    text-align: center;
+    padding: 65px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; /* Remplacez 'Nouvelle Police' par le nom de la police que vous souhaitez utiliser */
+}
+
+/* Style de la barre de navigation */
+nav {
+    background-color: #2a2929dc;
+    display: flex; /* Utiliser une mise en page flexible */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Utiliser une mise en page flexible */
+    flex-wrap: wrap; /* Permettre le passage à la ligne des éléments sur les petits écrans */
+    justify-content: center; /* Centrer horizontalement */
+}
+
+li {
+    margin: 0 20px; /* Espace autour des éléments de la liste */
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles pour les sections d'introduction */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#introduction-jung, #introduction-mbti {
+    margin-bottom: 30px;
+}
+
+#introduction-jung img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 18px; /* Changer la taille de la police en pixels */
+    font-family: Arial, sans-serif; /* Changer la police de caractères */
+}
+
+/* Ajouter une media query pour les petits écrans */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Afficher les éléments de la liste en colonne */
+        align-items: flex-start; /* Aligner à gauche */
+    }
+
+    li {
+        margin: 10px 0; /* Espace en haut et en bas des éléments de la liste */
+    }
+}
+.image-rotate {
+    transform: rotate(4deg);
+}
+.image-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.image-opacity:hover {
+    opacity: 0.8;
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; /* Remplacez 'Nouvelle Police' par le nom de la police que vous souhaitez utiliser */
+    font-size: 40px; /* Remplacez la taille par la taille souhaitée, par exemple 36 pixels */
+}
