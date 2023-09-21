@@ -12,6 +12,15 @@ header {
     font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; /* Remplacez 'Nouvelle Police' par le nom de la police que vous souhaitez utiliser */
 }
 
+#test-personnalite {
+    background-color: #d3aeda;
+    color: #031f47;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 nav {
     background-color: #2a2929dc;
     display: flex; 
