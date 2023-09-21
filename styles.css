@@ -1,11 +1,9 @@
-/* Styles de base pour le corps de la page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Style de l'en-tête */
 header {
     background-color: #031f47;
     color: #d3aeda;
@@ -14,39 +12,73 @@ header {
     font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; /* Remplacez 'Nouvelle Police' par le nom de la police que vous souhaitez utiliser */
 }
 
-/* Style de la barre de navigation */
 nav {
     background-color: #2a2929dc;
-    display: flex; /* Utiliser une mise en page flexible */
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     height: 60px;
 }
 
+/* Styles pour la version écran large */
 nav ul {
     list-style: none;
+    display: flex;
     padding: 0;
-    margin: 0;
-    display: flex; /* Utiliser une mise en page flexible */
-    flex-wrap: wrap; /* Permettre le passage à la ligne des éléments sur les petits écrans */
-    justify-content: center; /* Centrer horizontalement */
+}
+nav ul li:first-child {
+    margin-left: 20px; 
+  }
+
+nav li {
+    margin-right: 20px;
+}
+/* Styles pour la version mobile (écran étroit) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        list-style: none; /* Retirez les puces de la liste */
+        display: none; /* Masquer la liste par défaut */
+        flex-direction: row;
+        border-style: 50px;
+        position: relative;
+        border-radius: 2px;
+        background-color:2a2929dc;
+        left: 0;
+        width: 100%;
+        overflow-y: auto; /* Ajoutez un défilement vertical */
+        max-height: calc(100vh - 60px); /* Limitez la hauteur de la liste à la hauteur de l'écran moins la hauteur de la barre de navigation */
+    }
+
+    nav ul.active {
+        display: flex; /* Afficher la liste lorsque le bouton est cliqué */
+    }
+
+    nav button#menu-toggle {
+        display: block;
+        border-radius: 10px;
+        background-color: #c698d0;
+        font-size: 15px;
+        font-family: Georgia, sans-serif;
+    }
 }
 
-li {
-    margin: 0 20px; /* Espace autour des éléments de la liste */
-    font-size: 18px;
-    font-family: Arial, sans-serif;
+
+/* Cacher le bouton sur les écrans larges */
+@media screen and (min-width: 769px) {
+    nav button#menu-toggle {
+        display: none;
+    }
 }
+
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #d3aeda;
     font-weight: bold;
     font-size: 18px;
     font-family: Arial, sans-serif;
 }
 
-/* Styles pour les sections d'introduction */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -65,21 +97,10 @@ main {
 }
 
 p {
-    font-size: 18px; /* Changer la taille de la police en pixels */
-    font-family: Arial, sans-serif; /* Changer la police de caractères */
+    font-size: 18px; 
+    font-family: Arial, sans-serif; 
 }
 
-/* Ajouter une media query pour les petits écrans */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Afficher les éléments de la liste en colonne */
-        align-items: flex-start; /* Aligner à gauche */
-    }
-
-    li {
-        margin: 10px 0; /* Espace en haut et en bas des éléments de la liste */
-    }
-}
 .image-rotate {
     transform: rotate(4deg);
 }
@@ -92,6 +113,6 @@ p {
 }
 
 h1 {
-    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; /* Remplacez 'Nouvelle Police' par le nom de la police que vous souhaitez utiliser */
-    font-size: 40px; /* Remplacez la taille par la taille souhaitée, par exemple 36 pixels */
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; 
+    font-size: 40px;
 }
