@@ -174,19 +174,21 @@ h1 {
 
 /* Style pour le bouton d'achat */
 #checkout-button {
+    border: none;
+    font-family: Georgia, sans-serif;
+    font-size: 17px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #c698d0;
     color: #031f47;
-    text-decoration: none;
-    border-radius: 7px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
     margin-top: 10px; /* Espacement par rapport au prix */
 }
 
 /* Style au survol du bouton d'achat */
 #checkout-button:hover {
-    background-color: #67cea0;
+    background-color: #6da9c7;
 }
 @media screen and (max-width: 768px) {
     .livre {
