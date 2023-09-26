@@ -125,6 +125,9 @@ h1 {
     font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; 
     font-size: 40px;
 }
+.stipePayement{
+    font-size: 12px;
+}
 /* Style de base pour le conteneur du livre */
 /* Style pour le conteneur du livre */
 .livre {
@@ -140,10 +143,11 @@ h1 {
 
 /* Style pour l'image du livre avec une largeur maximale */
 .livre img {
-    width: 150px; /* Ajustez la largeur selon vos préférences */
+    width: 200px; /* Ajustez la largeur selon vos préférences */
     height: auto; /* Laisse la hauteur s'ajuster automatiquement pour maintenir les proportions */
     margin-right: 20px;
 }
+
 
 /* Style pour le conteneur des détails */
 .livre .details {
@@ -169,7 +173,7 @@ h1 {
 }
 
 /* Style pour le bouton d'achat */
-.bouton-achat {
+#checkout-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #c698d0;
@@ -181,6 +185,12 @@ h1 {
 }
 
 /* Style au survol du bouton d'achat */
-.bouton-achat:hover {
+#checkout-button:hover {
     background-color: #67cea0;
+}
+@media screen and (max-width: 768px) {
+    .livre {
+        flex-direction: column; /* Change la direction du flux en colonne pour empiler les éléments */
+        align-items: center; /* Centre horizontalement les éléments dans la colonne */
+    }
 }
