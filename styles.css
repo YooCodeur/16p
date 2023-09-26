@@ -125,3 +125,62 @@ h1 {
     font-family:Georgia, 'Times New Roman', Times, serif, sans-serif; 
     font-size: 40px;
 }
+/* Style de base pour le conteneur du livre */
+/* Style pour le conteneur du livre */
+.livre {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments horizontalement */
+    align-items: center; /* Centre verticalement les éléments */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Style pour l'image du livre avec une largeur maximale */
+.livre img {
+    width: 150px; /* Ajustez la largeur selon vos préférences */
+    height: auto; /* Laisse la hauteur s'ajuster automatiquement pour maintenir les proportions */
+    margin-right: 20px;
+}
+
+/* Style pour le conteneur des détails */
+.livre .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement les éléments dans le conteneur */
+    align-items: center; /* Centre horizontalement les éléments dans le conteneur */
+}
+
+/* Style pour le titre du livre */
+.livre h2 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+/* Style pour le prix */
+.livre p {
+    font-size: 18px;
+    margin: 0;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+/* Style pour le bouton d'achat */
+.bouton-achat {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c698d0;
+    color: #031f47;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espacement par rapport au prix */
+}
+
+/* Style au survol du bouton d'achat */
+.bouton-achat:hover {
+    background-color: #67cea0;
+}
